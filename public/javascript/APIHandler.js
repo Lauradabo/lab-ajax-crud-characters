@@ -13,15 +13,15 @@ class APIHandler {
     return this.service.get("/characters" + id);
   }
 
-  createOneRegister () {
-
+  createOneRegister (data) {
+    return this.service.post("/characters", data);
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, data) {
+    return this.service.patch("/characters" + id, data);
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return this.service.delete("/characters" + id);
   }
 }
